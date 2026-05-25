@@ -1,0 +1,19 @@
+{
+  "schema": "hiring/resume",
+  "data_dir": "data/hiring/resume/",
+  "split_seed": 42,
+  "train_ratio": 0.6,
+  "val_ratio": 0.2,
+  "test_ratio": 0.2,
+  "budget": {
+    "max_iterations": 10,
+    "max_cost_usd": 5.0
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-2.0-flash",
+    "temperature_extraction": 0.1,
+    "temperature_optimizer": 0.9
+  },
+  "seed_prompt": "You are a document extraction assistant. Extract all fields from the given document and return them as a valid JSON object. Follow the schema exactly. If a field is not found return null for that field."
+}
